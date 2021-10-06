@@ -1,0 +1,59 @@
+.container {
+    width: 150vh;
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+}
+
+.card {
+    width: 25rem;
+    border-radius: 1rem;
+    background: #364f6b;
+    box-shadow: 4px 4px 15px rgba(#000, 0.15);
+    position: relative;
+    color: gold;
+}
+
+.card .card__container {
+    padding: 2em;
+    width: 150%;
+    height: 150%;
+    background: white;
+    border-radius: 1rem;
+    position: relative;
+    border: 2px solid;
+}
+
+.card .card__header {
+    margin-bottom: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ff304f;
+}
+
+.card::before {
+    position: absolute;
+    top: 2rem;
+    right: -0.5rem;
+    content: '';
+    background: #fc5185;
+    width: 28px;
+    height: 28px;
+    transform: rotate(45deg);
+}
+
+.card::after {
+    position: absolute;
+    content: attr(data-label);
+    top: 11px;
+    right: -14px;
+    padding: 0.5rem;
+    width: 10rem;
+    background: #fc5185;
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
